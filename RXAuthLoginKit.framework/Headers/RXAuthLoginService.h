@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 一键登录弹窗
  * @param privacy1 用户协议url
  * @param privacy2 隐私协议url
- * @param callback 登录回调
+ * @param callBack 登录回调
  * @param atauth_appkey 一键登录appkey
  * success为YES，将accessToken返回值传入登录接口的extDic中
  * success为NO视为授权失败
