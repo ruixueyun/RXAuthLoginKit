@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RXSDK_Pure/RXSDK_Pure.h>
+#import "RXAuthLoginConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,17 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 一键登录弹窗
- * @param privacy1 用户协议url
- * @param privacy2 隐私协议url
- * @param callBack 登录回调
- * @param atauth_appkey 一键登录appkey
- * success为YES，将accessToken返回值传入登录接口的extDic中
- * success为NO视为授权失败
+ * @param config 配置信息
  */
-- (void)setAuthLoginViewWithPrivacy1:(NSString *)privacy1
-                            privacy2:(NSString *)privacy2
-                       atauth_appkey:(NSString *)atauth_appkey
-                            callBack:(void(^)(NSString *accessToken, BOOL success))callBack;
+- (void)authLoginWithConfig:(RXAuthLoginConfig *)config
+                   complete:(void(^)(NSDictionary *response, RX_CommonRequestError *error))complete;
 
 @end
 
