@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RXAuthLoginKit'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'ruixue RXAuthLoginKit framework.'
 
 # This description is used to generate tags and improve searc results.
@@ -34,6 +34,8 @@ TODO: Add long description of the pod here.
       #s.source_files = '*.framework'
   
    s.vendored_frameworks = '*.framework'
+  
+    s.resources          = "*.framework/RXUIKit.bundle"
   
   # s.resource_bundles = {
   #   'RXSDK' => ['RXSDK/Assets/*.png']

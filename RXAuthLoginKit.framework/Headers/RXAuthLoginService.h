@@ -22,8 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 一键登录弹窗
  * @param config 配置信息
  */
-- (void)authLoginWithConfig:(RXAuthLoginConfig *)config
-                   complete:(void(^)(NSDictionary *response, RX_CommonRequestError *error))complete;
+- (void)authLoginWithConfig:(RXAuthLoginConfig *)config;
 
 @end
 
