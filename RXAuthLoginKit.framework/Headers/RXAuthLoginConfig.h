@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSString *authKey;
 /**
+ * 协议默认是否勾选
+ */
+@property (nonatomic, assign) BOOL checkBoxIsChecked;
+/**
  * 协议地址，顺序为 0位用户协议，1位隐私协议
  */
 @property (nonatomic, strong) NSArray *privacies;

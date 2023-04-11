@@ -19,10 +19,29 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedSDK;
 
 /**
- * 一键登录弹窗
+ * 一键登录弹窗  自动调用初始化授权，拉起页面
+ * @param config 配置信息
+ * ！登录结果由通行证delegate返回，页面授权错误及页面操作由block中的error.response返回
+ */
+- (void)authLoginAutomaticWithConfig:(RXAuthLoginConfig *)config
+                            complete:(void(^)(NSDictionary *response, RX_CommonRequestError *error))complete;
+
+/**
+ * 一键登录初始化
  * @param config 配置信息
  */
-- (void)authLoginWithConfig:(RXAuthLoginConfig *)config;
+- (void)initAuthLoginWithConfig:(RXAuthLoginConfig *)config;
+
+/**
+ * 拉起登录页面
+ * ！登录结果由通行证delegate返回，页面授权错误及页面操作由block中的error.response返回
+ */
+- (void)setLoginPageWithComplete:(void(^)(NSDictionary *response, RX_CommonRequestError *error))complete;
+
+/**
+ * 获取运营商名称
+ */
+- (NSString *)getCardName;
 
 @end
 
