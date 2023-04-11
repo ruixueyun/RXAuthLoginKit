@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   
    s.vendored_frameworks = '*.framework'
   
-    s.resources          = "*.framework/RXUIKit.bundle"
+    s.resources          = "*.framework/RXAuthLoginKit.bundle"
   
   # s.resource_bundles = {
   #   'RXSDK' => ['RXSDK/Assets/*.png']
